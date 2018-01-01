@@ -9,7 +9,9 @@
 - Forgetting to write something back out of the accumulator (e.g., incrementing a variable)
 - Forgetting to rebuild the ROM
 - Overlapping code sections
-- Be careful accessing upper parts of HRAM because you can stomp your stack (which grows downwards from #fffe)
+- Be careful accessing upper parts of HRAM because you can stomp your stack (which grows downwards from #fffe).
+- The shadow OAM must be 16-byte aligned (i.e. end with 00) as the lower 2 bytes of the address is dropped during DMA. 
+  - Tip: you can specify byte alignment on `SECTION`s with RGBASM ([ref](https://rednex.github.io/rgbds/rgbasm.5.html#INCLUDE)), like `SECTION "variables", WRAM0, ALIGN[2]`
 
 ## RGBASM
 - Errors that happen in macros are not clear in the debugger
