@@ -1,7 +1,7 @@
 # Notes 
 
 
-## Common Errors-
+## Common Errors
 - Off by one error (especially with byte length for things like memcpy)
 - Not zeroing out variables
 - Not pushing/popping registers to the stack
@@ -14,6 +14,7 @@
 ## RGBASM
 - Errors that happen in macros are not clear in the debugger
 - When reloading after setting lots of debug breakpoints, the new ROM isn't always loaded. 
+- Breakpoints set on the source block for the DMA handler (trampoline) code will not run, as it's the copied code in HRAM that runs. 
 
 ## "Best" "practices"
 
