@@ -40,3 +40,15 @@
     ```
 
 - Lowercase hex is easier to read (prefer #fffe over #FFFE). There is less contrast between letter shapes ([ref](http://uxmovement.com/content/all-caps-hard-for-users-to-read/)).
+
+- From the [pandocs](http://gbdev.gg8.se/wiki/articles/Reducing_Power_Consumption): 
+
+    > The HALT instruction should be used whenever possible to reduce power consumption & extend the life of the batteries. This command stops the system clock, reducing the power consumption of both the CPU and ROM.
+    > 
+    > The CPU will remain stopped until an interrupt occurs at which point the interrupt is serviced and then the instruction immediately following the HALT is executed.
+    > 
+    > Depending on how much CPU time is required by a game, the HALT instruction can extend battery life anywhere from 5 to 50% or possibly more.
+
+
+
+
