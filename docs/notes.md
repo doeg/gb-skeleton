@@ -13,8 +13,8 @@
 - The shadow OAM must be 16-byte aligned (i.e. end with 00) as the lower 2 bytes of the address is dropped during DMA. 
   - Tip: you can specify byte alignment on `SECTION`s with RGBASM ([ref](https://rednex.github.io/rgbds/rgbasm.5.html#INCLUDE)), like `SECTION "variables", WRAM0, ALIGN[2]`
 
-## RGBASM
-- Errors that happen in macros are not clear in the debugger
+## BGB 
+- Errors that happen in macros are not clear in the BGB debugger
 - When reloading after setting lots of debug breakpoints, the new ROM isn't always loaded. 
 - Breakpoints set on the source block for the DMA handler (trampoline) code will not run, as it's the copied code in HRAM that runs. 
 
